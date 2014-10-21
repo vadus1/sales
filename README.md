@@ -10,7 +10,7 @@ it will setup ruby and gemset according to files `.ruby-version` and `.ruby-gems
 Getting Started
 ---------------
 
-* `$ git clone git@github.com:vadus/sales.git`
+* `$ git clone git@github.com:vadus1/sales.git`
 * `$ cd ./sales`
 * `$ cp config/database.sample.yml config/database.yml` and edit for your settings.
 * `$ bundle install`
