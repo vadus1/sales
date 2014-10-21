@@ -47,6 +47,8 @@ gem 'devise', '~> 3.3.0'
 gem 'semantic-ui-sass', '~> 0.19.3.0'
 gem 'rails_best_practices'
 gem 'active_link_to'
+gem 'aws-sdk'
+gem 'fog'
 gem 'rails_12factor', group: :production
 
 group :test, :development do
