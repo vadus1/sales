@@ -38,10 +38,16 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 #A+H
-gem "slim-rails"
+gem 'slim-rails'
 gem 'simple_form'
 gem 'mini_magick'
 gem 'carrierwave'
+gem 'autoprefixer-rails'
+gem 'devise', '~> 3.3.0'
+gem 'semantic-ui-sass', '~> 0.19.3.0'
+gem 'rails_best_practices'
+gem 'active_link_to'
+gem 'rails_12factor', group: :production
 
 group :test, :development do
   gem 'better_errors'

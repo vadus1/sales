@@ -14,6 +14,8 @@ GEM
       activesupport (= 4.1.6)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    active_link_to (1.0.2)
+      actionpack
     activemodel (4.1.6)
       activesupport (= 4.1.6)
       builder (~> 3.1)
@@ -31,7 +33,10 @@ GEM
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (3.1.2.20141016)
+      execjs
     awesome_print (1.2.0)
+    bcrypt (3.1.7)
     better_errors (2.0.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -44,6 +49,8 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    code_analyzer (0.4.5)
+      sexp_processor
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -52,6 +59,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    colored (1.2)
     columnize (0.8.9)
     coolline (0.5.0)
       unicode_utils (~> 1.4)
@@ -63,6 +71,12 @@ GEM
       debugger-ruby_core_source (~> 1.3.5)
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.3.5)
+    devise (3.3.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     diffy (3.0.6)
     erubis (2.7.0)
@@ -101,6 +115,7 @@ GEM
       subexec (~> 0.2.1)
     minitest (5.4.2)
     multi_json (1.10.1)
+    orm_adapter (0.5.0)
     pg (0.17.1)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -139,6 +154,21 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.6)
       sprockets-rails (~> 2.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_best_practices (1.15.4)
+      activesupport
+      awesome_print
+      code_analyzer (>= 0.4.3)
+      colored
+      erubis
+      i18n
+      json
+      require_all
+      ruby-progressbar
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (4.1.6)
       actionpack (= 4.1.6)
       activesupport (= 4.1.6)
@@ -147,6 +177,8 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    require_all (1.3.2)
+    ruby-progressbar (1.6.0)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -156,6 +188,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    semantic-ui-sass (0.19.3.0)
+      sass (~> 3.2)
+    sexp_processor (4.4.4)
     simple_form (3.0.2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -195,17 +230,22 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicode_utils (1.4.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     yard (0.8.7.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_link_to
   annotate
+  autoprefixer-rails
   better_errors
   binding_of_caller
   carrierwave
   coffee-rails (~> 4.0.0)
+  devise (~> 3.3.0)
   jazz_hands
   jbuilder (~> 2.0)
   jquery-rails
@@ -213,8 +253,11 @@ DEPENDENCIES
   pg
   quiet_assets
   rails (= 4.1.6)
+  rails_12factor
+  rails_best_practices
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  semantic-ui-sass (~> 0.19.3.0)
   simple_form
   slim-rails
   spring

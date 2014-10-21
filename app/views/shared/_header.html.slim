@@ -1,0 +1,19 @@
+.ui.large.menu
+  = active_link_to root_path, class: 'item' do
+    i.home.icon
+    | Home
+  .right.menu
+    - if user_signed_in?
+      .ui.dropdown.item
+        | More
+        i.icon.dropdown
+        .menu
+          = link_to edit_user_registration_path, class: 'item' do
+            i.edit.icon
+            | Edit Profile
+          = link_to destroy_user_session_path, method: :delete, class: 'item' do
+            i.sign.out.icon
+            | Log Out
+    - else
+      .item
+        = link_to 'Sign Up', new_user_registration_path, class: 'ui teal button'

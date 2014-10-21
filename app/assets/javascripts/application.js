@@ -13,4 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require semantic-ui
+
+$(function () {
+  $('.ui.form').form({
+      inline: true,
+      on: 'blur',
+      transition: 'fade down'
+  });
+  $('.ui.dropdown').dropdown();
+});

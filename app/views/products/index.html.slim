@@ -1,0 +1,36 @@
+h1.ui.dividing.header
+  | Listing products
+table.ui.table.segment
+  thead
+    tr
+      th Name
+      th Permalink
+      th Description
+      th Price
+      th User
+      th
+  tbody
+    - @products.each do |product|
+      tr
+        td = product.name
+        td = product.permalink
+        td = product.description
+        td = product.price
+        td = product.user_email
+        td
+          .small.ui.buttons
+            = link_to product, class: 'ui blue labeled icon button' do
+              i.zoom.in.icon
+              | Show
+            = link_to edit_product_path(product), class: 'ui blue labeled icon button' do
+              i.edit.icon
+              | Edit
+            = link_to product, data: {confirm: 'Are you sure?'}, method: :delete, class: 'ui red labeled icon button' do
+              i.trash.icon
+              | Destroy
+  tfoot
+    tr
+      th colspan="6"
+        = link_to new_product_path, class: 'ui blue labeled icon button' do
+          i.add.icon
+          | New Product
