@@ -1,0 +1,9 @@
+h1 = @product.name
+= @product.description.html_safe
+- if @error
+  = @error
+p
+  | Price: #{formatted_price(@product.price)}
+
+= form_tag buy_path(permalink: @product.permalink) do
+  script.stripe-button data-amount=@product.price data-description=@product.name data-key=Rails.configuration.stripe[:publishable_key] src="https://checkout.stripe.com/v2/checkout.js"

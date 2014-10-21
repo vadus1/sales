@@ -4,6 +4,8 @@ class Sale < ActiveRecord::Base
 
   validates :guid, uniqueness: true
 
+  delegate :file, to: :product, prefix: true
+
   private
     def populate_guid
       if new_record?

@@ -38,27 +38,31 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 #A+H
+gem 'fog'
+gem 'aws-sdk'
+gem 'httparty'
 gem 'slim-rails'
 gem 'simple_form'
 gem 'mini_magick'
 gem 'carrierwave'
-gem 'autoprefixer-rails'
-gem 'devise', '~> 3.3.0'
-gem 'semantic-ui-sass', '~> 0.19.3.0'
-gem 'rails_best_practices'
 gem 'active_link_to'
-gem 'aws-sdk'
-gem 'fog'
+gem 'autoprefixer-rails'
+gem 'rails_best_practices'
+gem 'devise', '~> 3.3.0'
+gem 'stripe', '~> 1.15.0'
+gem 'semantic-ui-sass', '~> 0.19.3.0'
 gem 'rails_12factor', group: :production
 
 group :test, :development do
+  gem 'jazz_hands'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'jazz_hands'
 end
 
 group :development do
-  gem 'quiet_assets'
   gem 'thin'
   gem 'annotate'
+  gem 'stripe-ruby-mock', '~> 1.10.1.7'
+  gem 'quiet_assets'
+  gem 'database_cleaner'
 end
